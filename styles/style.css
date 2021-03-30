@@ -1,27 +1,28 @@
+@import url("../Lato-Thin.ttf");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+html *,
+html *:before,
+html *:after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
 
-body {
+html body {
   min-height: 100vh;
   margin: 0;
 }
 
-nav {
-  background: black;
+html body nav {
+  background: #191716;
   width: 100vw;
   height: 3rem;
 }
 
-main {
+html body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,49 +35,56 @@ main {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   min-height: calc(100vh - 6rem);
-  padding: 0.5em;
+  padding: 1rem;
+  background: #e0e2db;
 }
 
-footer {
-  background: black;
-  width: 100vw;
-  height: 3rem;
-}
-
-.image {
+html body main .image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 0.5em;
-  margin: 1em;
+  margin: 1rem;
+  background: #e6af2e;
+  -webkit-box-shadow: 0 0 0.3em #202020;
+          box-shadow: 0 0 0.3em #202020;
   width: 12rem;
   height: 12rem;
   border-radius: 15px;
 }
 
-.image > img {
+html body main .image > img {
   border-radius: 10px;
   width: auto;
   height: auto;
 }
 
-.mouse {
-  -webkit-transition: background 0.2s, -webkit-transform 0.4s;
-  transition: background 0.2s, -webkit-transform 0.4s;
-  transition: transform 0.4s, background 0.2s;
-  transition: transform 0.4s, background 0.2s, -webkit-transform 0.4s;
-  background: red;
+html body main .mouse:hover {
+  -webkit-transform: scale(1.1) rotate(-5deg) translate(0, -6px);
+          transform: scale(1.1) rotate(-5deg) translate(0, -6px);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.62, 0.37, 0.18, 0.77);
+          transition-timing-function: cubic-bezier(0.62, 0.37, 0.18, 0.77);
 }
 
-.mouse:hover {
-  -webkit-transform: scale(1.1) rotate(-5deg);
-          transform: scale(1.1) rotate(-5deg);
-  background: yellow;
-}
-
-.clicked {
-  background: green;
+html body main .clicked {
   max-width: 100vw;
   max-height: 100vh;
+}
+
+html body footer {
+  background: #191716;
+  width: 100vw;
+  height: 3rem;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Lato-Thin', sans-serif;
+  font-weight: 100;
 }
 /*# sourceMappingURL=style.css.map */
